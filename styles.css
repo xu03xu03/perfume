@@ -1,0 +1,197 @@
+ /* 導覽列和背景圖片整合 */
+ .hero-background {
+  background-image: url('./img/banner.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 700px;
+  padding: 10px 0; /* 根據需要調整此間距以確保內容居中 */
+}
+
+/* 調整導覽列背景透明度 */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* 使導覽列半透明 */
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: #f8f9fa;
+}
+.navbar-brand{
+  font-weight:bolder;
+  
+}
+
+.hero-content {
+  padding: 100px 0;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.hero-content h2 {
+  color: #000;
+  font-size: 1.5em;
+  padding: 100px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-outline-light {
+  color: white;
+  border-color: white;
+  margin: 20px;
+}
+
+.btn-outline-light:hover {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+
+/* 基本樣式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* 確保輪播項目中的每個產品佔用正確的寬度 */
+#products .carousel-inner .carousel-item {
+  display: flex;
+  flex-wrap: nowrap; /* 禁止在一行中換行 */
+  justify-content: space-between;
+}
+#products .carousel-item .col-md-2 {
+  flex: 0 0 19%; /* 確保每個產品佔據 19% 的父容器寬度 */
+  max-width: 19%; /* 確保每個產品的最大寬度不超過 19% */
+  padding: 0 5px; /* 在產品之間添加間距，防止重疊 */
+  box-sizing: border-box;
+}
+
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* 控制輪播箭頭的大小和位置 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 50%, 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #007bff;
+  border: none;
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3;
+}
+
+/* 保證響應式下的間距和佈局正常 */
+@media (max-width: 992px) {
+  #products .carousel-item .col-md-2 {
+      flex: 0 0 48%; /* 在中等尺寸裝置上，每行顯示兩個產品 */
+      max-width: 48%;
+      margin-bottom: 20px;
+  }
+}
+
+  #products .carousel-item .col-md-2 {
+      max-width: 48%;
+      margin-bottom: 20px;
+  }
+
+
+@media (max-width: 576px) {
+  #products .carousel-item .col-md-2 {
+      flex: 0 0 100%; /* 在小尺寸裝置上，每行顯示一個產品 */
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+}
+
+  #products .carousel-item .col-md-2 {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
