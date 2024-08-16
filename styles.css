@@ -197,6 +197,44 @@ h2 {
   background-color: #e3d5ca;
   color: #6c584c;
 }
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* 預設隱藏 */
+  z-index: 1000;
+  background-color: #6c584c; /* 按鈕背景顏色 */
+  color: black; /* 按鈕文字顏色 */
+  border: none; /* 移除邊框 */
+  padding: 10px 20px; /* 調整內邊距 */
+  font-size: 16px; /* 調整字體大小 */
+  cursor: pointer;
+  border-radius: 5px; /* 添加圓角 */
+}
+
+.back-to-top:hover {
+  background-color: #4a3c3b; /* 懸浮時改變背景顏色 */
+}
+
+
+/* 右側懸浮按鈕樣式 */
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 1000;
+}
+
+.floating-buttons a img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+
 /* 保證響應式下的間距和佈局正常 */
 @media (max-width: 992px) {
   #products .carousel-item .col-md-2 {
@@ -224,17 +262,6 @@ h2 {
       max-width: 100%;
       margin-bottom: 20px;
   }
- 
-
-
-
-
-
-
-
-
-
-
 
 
 
