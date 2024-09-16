@@ -1,130 +1,144 @@
- /* 導覽列和背景圖片整合 */
- .hero-background {
+ *{
+  font-family: "Poetsen One", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* ****************navbar**************** */
+.hero-background {
   background-image: url('./img/banner.png');
   background-size: cover;
   background-position: center;
   color: white;
   height: 700px;
-  padding: 10px 0; /* 根據需要調整此間距以確保內容居中 */
+  padding: 10px 0;
 }
 
-/* 調整導覽列背景透明度 */
 .navbar {
-  background-color: rgba(0, 0, 0, 0.5); /* 使導覽列半透明 */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 使導覽列半透明 */
 }
 
 .navbar .nav-link {
-  font-family: "Poetsen One", sans-serif;
   color: white;
 }
 
 .navbar .nav-link:hover {
-  font-family: "Poetsen One", sans-serif;
   color: #f8f9fa;
 }
-.navbar-brand{
-  font-family: "Poetsen One", sans-serif;
-  font-weight:bolder;
+
+.navbar-brand {
+  font-weight: bolder;
   color: #29201b;
 }
 
+
+/* ****************介紹區塊**************** */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; 
+}
+
 .hero-content {
-  padding: 100px 0;
+  margin-top: 20px;
 }
 
 .hero-content h1 {
-  font-family: "Poetsen One", sans-serif;
-  font-size: 4em;
-  margin-bottom: 20px;
+  font-size: 3em;
   color: #6c584c;
+  
 }
 
 .hero-content h2 {
-  font-family: "Poetsen One", sans-serif;
-  font-weight:100;
+  font-weight: 100;
   color: #6c584c;
-  font-size: 1.5em;
-  padding: 100px;
-  margin-bottom: 10px;
+  font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 1px;
-}
+  margin-bottom: 20px;
+} 
 
 .btn-outline-light {
-  font-family: "Poetsen One", sans-serif;
   color: white;
   border-color: white;
   margin: 20px;
+  
 }
 
 .btn-outline-light:hover {
-  font-family: "Poetsen One", sans-serif;
-  color: #6c584c;;
+  color: #6c584c;
   background-color: white;
   border-color: white;
 }
-.first h2,p{
-  color: #6c584c;
-  
+@media screen and (max-width: 862px) {
+  .hero-content h1 {
+    font-size: 7vw;
+  }
+}
+/* ****************精選商品**************** */
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  padding: 0 100px;
 }
 
-/* 基本樣式 */
-body {
-  font-family: "Poetsen One", sans-serif;
-  margin: 0;
-  padding: 0;
+.swiper-container {
+  width: 90%;
+  height: auto;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  
-  
- 
-}
-.carousel-inner{
-  border-radius: 5px;
-  
-}
-#products{
-  background-color: #e3d5ca;
-}
-#testimonials{
-  background-color: #e3d5ca;
-}
-#testimonials p{
-  font-size: 25px;
-}
-
-
-h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  font-weight:bolder;
-}
-
-/* 確保輪播項目中的每個產品佔用正確的寬度 */
-#products .carousel-inner .carousel-item {
+.swiper-slide {
+  background-color: #f3f3f3;
   display: flex;
-  flex-wrap: nowrap; /* 禁止在一行中換行 */
-  
-  
-}
-#products .carousel-item .col-md-2 {
-  flex: 0 0 19%; /* 確保每個產品佔據 19% 的父容器寬度 */
-  max-width: 19%; /* 確保每個產品的最大寬度不超過 19% */
-  padding: 0 5px; /* 在產品之間添加間距，防止重疊 */
-  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+.first h2,p {
+  color: #6c584c;
+}
+
+.carousel-inner {
+  border-radius: 5px;
+
+}
 
 .card {
-  border: 1px solid #6c584c;
+  
   border-radius: 5px;
   overflow: hidden;
   text-align: center;
   background-color: #e3d5ca;
+  height: 450px;
 }
 
 .card-img-top {
@@ -137,9 +151,9 @@ h2 {
 }
 
 .card-title {
-  font-size: 1.2em;
+  font-size: 0.8em;
   margin-bottom: 10px;
-  font-weight:bolder;
+  font-weight: bolder;
   color: #6c584c;
 }
 
@@ -160,64 +174,37 @@ h2 {
   background-color: #f0ead2;
   border-color: #e3d5ca;
 }
-
-/* 控制輪播箭頭的大小*/
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 100%, 100%;
+/* ******************顧客評價**************** */
+#testimonials{
+  background-color: #e3d5ca;
 }
 
-
-.carousel-control-prev{
-  width: 5%;
-  left: -60px; /* 調整箭頭距離圖片左邊的距離 */
-}
-.carousel-control-next {
-  width: 5%;
-  right: -60px; /* 調整箭頭距離圖片右邊的距離 */
-}
-.carousel-indicators{
-  bottom: -50px;/* 調整此值可以將指示器移到圖片下方 */
-}
-
-.carousel-indicators button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #6c584c;
-  border: none;
-  
-}
-
-.carousel-indicators .active {
-  background-color: #f0ead2;
-}
-
-#contact .btn{
+#contact .btn {
   background-color: #e3d5ca;
   color: #6c584c;
 }
+
+/* ******************回到頂部**************** */
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  display: none; /* 預設隱藏 */
+  display: none;
   z-index: 1000;
-  background-color: #6c584c; /* 按鈕背景顏色 */
-  color: black; /* 按鈕文字顏色 */
-  border: none; /* 移除邊框 */
-  padding: 10px 20px; /* 調整內邊距 */
-  font-size: 16px; /* 調整字體大小 */
+  background-color: #6c584c;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 5px; /* 添加圓角 */
+  border-radius: 5px;
 }
 
 .back-to-top:hover {
-  background-color: #4a3c3b; /* 懸浮時改變背景顏色 */
+  background-color: #4a3c3b;
 }
 
-
-/* 右側懸浮按鈕樣式 */
+/* ******************右側懸浮按鈕**************** */
 .floating-buttons {
   position: fixed;
   right: 20px;
@@ -233,39 +220,6 @@ h2 {
   height: 100px;
   cursor: pointer;
 }
-
-
-/* 保證響應式下的間距和佈局正常 */
-@media (max-width: 992px) {
-  #products .carousel-item .col-md-2 {
-      flex: 0 0 48%; /* 在中等尺寸裝置上，每行顯示兩個產品 */
-      max-width: 48%;
-      margin-bottom: 20px;
-  }
-}
-
-  #products .carousel-item .col-md-2 {
-      max-width: 48%;
-      margin-bottom: 20px;
-  }
-
-
-@media (max-width: 576px) {
-  #products .carousel-item .col-md-2 {
-      flex: 0 0 100%; /* 在小尺寸裝置上，每行顯示一個產品 */
-      max-width: 100%;
-      margin-bottom: 20px;
-  }
-}
-
-  #products .carousel-item .col-md-2 {
-      max-width: 100%;
-      margin-bottom: 20px;
-  }
- 
-
-
-
 
 
 
