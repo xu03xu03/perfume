@@ -1,4 +1,4 @@
-/平滑滾動效果
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -32,6 +32,5 @@ document.querySelector('.back-to-top').addEventListener('click', function(e) {
     console.log('Back to top button clicked'); // 確認按鈕點擊事件被觸發
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
 
 
