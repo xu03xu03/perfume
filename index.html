@@ -7,19 +7,21 @@
     <title>商品展示網站</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=LXGW+WenKai+TC:wght@300;700&family=Noto+Sans+TC:wght@100..900&family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=LXGW+WenKai+TC:wght@300;700&family=Noto+Sans+TC:wght@100..900&family=Poetsen+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- 背景圖片和導覽列整合 -->
     <header class="hero-background">
-        <!-- 導覽列 -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">EVERGLOW</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -28,10 +30,10 @@
                             <a class="nav-link" href="#">首頁</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">品牌故事</a>
+                            <a class="nav-link" href="#story">品牌故事</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">客服</a>
+                            <a class="nav-link" href="#contact">聯繫我們</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">會員</a>
@@ -45,149 +47,124 @@
         </nav>
 
         <!-- 主要內容 (Hero Section) -->
-        <div class="container hero-content text-center">
+        <div class="container hero-content text-center mt-5" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
             <h2>讓香氣成為你的個性標籤</h2>
             <h1>給頭髮與肌膚奢華的專屬呵護</h1>
-            <a href="#" class="btn btn-outline-light">選購系列產品</a>
-        </div>
+            <a href="#product" class="btn btn-outline-light">選購系列產品</a>
+        </div>        
     </header>
 
-    <!-- 產品介紹 (Carousel) -->
-    <section id="products" class="first py-5 text-center">
-        <div class="container">
-            <h2>精選產品</h2>
-            <div id="productCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <!-- Indicators -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-
-                <!-- 輪播Carousel items -->
-                <div class="carousel-inner first">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash1.png" class="card-img-top" alt="產品1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">夜間修護洗護組合</h5>
-                                        <p class="card-text">$1150</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash2.png" class="card-img-top" alt="產品2">
-                                    <div class="card-body">
-                                        <h5 class="card-title">洗護平衡系列</h5>
-                                        <p class="card-text">$1299</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash3.png" class="card-img-top" alt="產品3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">經典護膚平衡套組</h5>
-                                        <p class="card-text">$3600</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash4.png" class="card-img-top" alt="產品4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">SPA精華油(任選)</h5>
-                                        <p class="card-text">$990</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
+    <h2 id="product">精選產品</h2>
+    <div class="carousel-container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash1.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">夜間修護洗護組合</h5>
+                            <p class="card-text">$1150</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="10000">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash5.png" class="card-img-top" alt="產品5">
-                                    <div class="card-body">
-                                        <h5 class="card-title">輕盈柔順護髮油</h5>
-                                        <p class="card-text">$699</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash6.png" class="card-img-top" alt="產品6">
-                                    <div class="card-body">
-                                        <h5 class="card-title">保濕洗護+髮模組合</h5>
-                                        <p class="card-text">$1599</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash7.png" class="card-img-top" alt="產品7">
-                                    <div class="card-body">
-                                        <h5 class="card-title">輕盈柔順護髮油套組</h5>
-                                        <p class="card-text">$1299</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <img src="./img/wash8.png" class="card-img-top" alt="產品8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">玩美養髮液</h5>
-                                        <p class="card-text">$1699</p>
-                                        <a href="#" class="btn btn-outline-primary">購買</a>
-                                    </div>
-                                </div>
-                            </div>
-                         
-                            
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash2.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">洗護平衡系列</h5>
+                            <p class="card-text">$1299</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
                         </div>
                     </div>
-                    <!-- 可依需求繼續增加更多產品組 -->
                 </div>
-
-                <!-- 輪播控制器Carousel controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash3.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">經典護膚平衡套組</h5>
+                            <p class="card-text">$3600</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash4.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">SPA精華油(任選)</h5>
+                            <p class="card-text">$990</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash5.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">輕盈柔順護髮油</h5>
+                            <p class="card-text">$699</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash6.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">保濕洗護+髮模組合</h5>
+                            <p class="card-text">$1599</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash7.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">輕盈柔順護髮油套組</h5>
+                            <p class="card-text">$1299</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="./img/wash8.png" class="card-img-top" alt="產品1">
+                        <div class="card-body">
+                            <h5 class="card-title">玩美養髮液</h5>
+                            <p class="card-text">$1699</p>
+                            <a href="#" class="btn btn-outline-primary">購買</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-     <!-- 品牌故事 -->
-     <section id="story" class="first py-5 bg-light text-center">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- 品牌故事 -->
+    <section id="story" class="first py-5 bg-light text-center">
         <div class="container">
             <h2>品牌故事</h2>
             <p>我們的品牌始於對香氛保養的熱愛，致力於將自然的美好帶入每一個人的生活。我們相信，每一滴精油、每一種香氣，都承載著來自大自然的純粹力量，能夠為人們帶來內外兼修的美麗與健康。
-                </p>
-            
-            <img src="https://media.istockphoto.com/id/1301327579/photo/young-women-pouring-oil-for-hair-stock-photo.jpg?s=612x612&w=0&k=20&c=UDA4I4VgUP0Aa8TK1BoBzGCyKWVZzt9wjJcl83yWG5A=" class="img-fluid" alt="品牌故事圖片">
+            </p>
+
+            <img src="https://media.istockphoto.com/id/1301327579/photo/young-women-pouring-oil-for-hair-stock-photo.jpg?s=612x612&w=0&k=20&c=UDA4I4VgUP0Aa8TK1BoBzGCyKWVZzt9wjJcl83yWG5A="
+                class="img-fluid" alt="品牌故事圖片">
             <p>
                 秉持著「自然與純粹的呵護」理念，我們只選擇最天然的成分，透過精心調配，將大自然的能量注入您的髮絲與肌膚，讓每一次的護理不僅是對外在的打理，更是一場身心靈的療癒旅程。
-                
+
                 <br>在這段「舒緩身心的香氛之旅」中，我們希望每一位使用者都能感受到香氣帶來的深層舒緩與自我寧靜。透過我們的產品，頭髮與肌膚將得到充分的滋養，而您也能找到屬於自己的片刻平靜。
             </p>
-            <img src="https://media.istockphoto.com/id/1020457138/photo/essential-oil-dripping-on-the-green-leaf-from-pipette.jpg?s=612x612&w=0&k=20&c=A8oh1G10jCQowj308SowMNquwJ-joX18Gsg2c9uc-GA=" class="img-fluid" alt="品牌故事圖片">
-            <p>我們深知奢華不僅僅存在於昂貴的包裝，而是源自於「奢華的頭髮與肌膚體驗」。因此，我們結合了大自然最珍貴的成分與先進的護理技術，為您帶來超越平凡的美麗呵護。每一次使用，都是一次尊享的體驗，讓您沉浸在芬芳的世界中，感受大自然的饋贈。</p>
+            <img src="https://media.istockphoto.com/id/1020457138/photo/essential-oil-dripping-on-the-green-leaf-from-pipette.jpg?s=612x612&w=0&k=20&c=A8oh1G10jCQowj308SowMNquwJ-joX18Gsg2c9uc-GA="
+                class="img-fluid" alt="品牌故事圖片">
+            <p>我們深知奢華不僅僅存在於昂貴的包裝，而是源自於「奢華的頭髮與肌膚體驗」。因此，我們結合了大自然最珍貴的成分與先進的護理技術，為您帶來超越平凡的美麗呵護。每一次使用，都是一次尊享的體驗，讓您沉浸在芬芳的世界中，感受大自然的饋贈。
+            </p>
 
-            <img src="https://media.istockphoto.com/id/1342271140/photo/woman-performing-professional-cosmetics-research-concept-of-natural-organic-ingredients-in.jpg?s=612x612&w=0&k=20&c=qFY_-a0IHLDZEpXr8hCWtvPzYZY3SESj7CGXtZL5qi0=" class="img-fluid" alt="品牌故事圖片">
+            <img src="https://media.istockphoto.com/id/1342271140/photo/woman-performing-professional-cosmetics-research-concept-of-natural-organic-ingredients-in.jpg?s=612x612&w=0&k=20&c=qFY_-a0IHLDZEpXr8hCWtvPzYZY3SESj7CGXtZL5qi0="
+                class="img-fluid" alt="品牌故事圖片">
 
         </div>
     </section>
@@ -231,26 +208,26 @@
     </section>
 
     <!-- 回到頂部按鈕 -->
-<button class="back-to-top">回到頂部</button>
+    <button class="back-to-top">回到頂部</button>
 
-<!-- 右側懸浮按鈕 -->
-<div class="floating-buttons">
-    <a href="https://line.me" target="_blank">
-        <img src="./img/line.png" alt="LINE" />
-    </a>
-    <a href="#" target="_blank">
-        <img src="./img/ins.png" alt="Instagram" />
-    </a>
-    <a href="#contact">
-        <img src="./img/talk.png" alt="線上客服" />
-    </a>
-</div>
+    <!-- 右側懸浮按鈕 -->
+    <!-- <div class="floating-buttons">
+        <a href="https://line.me" target="_blank">
+            <img src="./img/line.png" alt="LINE" />
+        </a>
+        <a href="#" target="_blank">
+            <img src="./img/ins.png" alt="Instagram" />
+        </a>
+        <a href="#contact">
+            <img src="./img/talk.png" alt="線上客服" />
+        </a>
+    </div> -->
 
 
     <!-- Footer -->
     <footer class="first py-3 bg-dark text-white text-center">
         <div class="container">
-            <p>© 2024 香氛品牌. 保留所有權利.</p>
+            <p>© 2024 EVERGLOW. 保留所有權利.</p>
             <div>
                 <a href="#" class="text-white mx-2">Facebook</a>
                 <a href="#" class="text-white mx-2">Instagram</a>
@@ -260,6 +237,36 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,   
+            spaceBetween: 20,   
+            loop: true,         
+            navigation: {       
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {      
+                320: {          
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                640: {           
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {          
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1024: {         
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
