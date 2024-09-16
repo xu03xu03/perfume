@@ -1,4 +1,4 @@
- *{
+*{
   font-family: "Poetsen One", sans-serif;
 }
 
@@ -173,6 +173,41 @@ h2 {
   color: #6c584c;
   background-color: #f0ead2;
   border-color: #e3d5ca;
+}
+/* ******************品牌故事**************** */
+#story h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#story p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#story img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#story img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+@media (max-width: 768px) {
+  #story img {
+      margin-bottom: 30px; 
+  }
+
+  #story h2 {
+      font-size: 2rem;
+  }
+
+  #story p {
+      font-size: 1rem;
+      margin-bottom: 20px; 
+  }
 }
 /* ******************顧客評價**************** */
 #testimonials{
